@@ -11,5 +11,5 @@ import org.springframework.data.jpa.repository.Query;
 public interface ICancionRepository extends JpaRepository<Cancion, Integer> {
 
     @Query(value = "Select * from cancion c where c.title = :title", nativeQuery = true)
-    public Cancion buscarCacnionTitle(String title);
+    public Cancion buscarCancionTitle(String title);
 }
