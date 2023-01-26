@@ -24,4 +24,7 @@ public class ListaReproduccionServiceImplement extends GenericServiceImplement<L
         return listaRepository;
     }
 
+    public ListaReproduccion buscarListaName(String name) {
+        return listaRepository.buscarListaName(name);
+    }
 }

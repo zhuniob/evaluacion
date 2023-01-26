@@ -39,18 +39,9 @@ public class ListaReproduccion implements Serializable {
 
     private String songs;
 
-    /* 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "lista_cancion",
-            joinColumns = {
-                @JoinColumn(name = "id_lista")},
-            inverseJoinColumns = {
-                @JoinColumn(name = "id_cancion")})
-    private List<Cancion> canciones = new ArrayList<Cancion>();
+    /*
+    @JsonIgnore
+    @OneToMany(mappedBy = "lista_reproduccion")
+    private List<Cancion> canciones;
      */
-    @ManyToMany
-    @JoinTable(name = "listadecanciones", joinColumns = @JoinColumn(name = "id_lista"),
-            inverseJoinColumns = @JoinColumn(name = "id_cancion"))
-    private List<ListaReproduccion> canciones = new ArrayList<>();
-
 }

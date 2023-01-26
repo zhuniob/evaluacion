@@ -22,7 +22,7 @@ public class CancionServiceImplement extends GenericServiceImplement<Cancion, In
         return cancionRepository;
     }
 
-    public Cancion buscarCacnionTitle(String title) {
+    public Cancion buscarCancionTitle(String title) {
         return cancionRepository.buscarCancionTitle(title);
     }
 }

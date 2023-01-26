@@ -45,12 +45,8 @@ public class Cancion implements Serializable {
     private Integer year;
 
     /*
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "cancion_lista",
-            joinColumns = {
-                @JoinColumn(name = "id_cancion")},
-            inverseJoinColumns = {
-                @JoinColumn(name = "id_lista")})
-    private List<ListaReproduccion> listas = new ArrayList<ListaReproduccion>();
+    @ManyToOne
+    @JoinColumn(name = "id_lista", referencedColumnName = "id_lista")
+    private ListaReproduccion listaReproduccion;
      */
 }
